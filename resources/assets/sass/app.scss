@@ -1,0 +1,68 @@
+$red: #EF7171;
+$orange: #FFA945;
+$yellow: #EFEA71;
+$newYellow: #EFEA4D;
+$green: #98EF71;
+$grayish: #AAB3B7;
+$white: #FFFFFF;
+$blackish: #2E2E2F;
+
+$halyard: "halyard-display",sans-serif;
+
+.page-text {
+	font-family: $halyard;
+	color: $blackish;
+}
+.page-title {
+	color: $blackish;
+}
+.page-key {
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+@media only screen and (max-width: 610px) {
+
+   .page-key {
+   	font-size: 1rem;
+   }
+
+}
+.small-note {
+	font-size: .75rem;
+}
+.player-row {
+	border: 1px solid $grayish;
+	margin: 1rem;
+	font-family: $halyard;
+}
+.green {
+	background-color: $green;
+	color: $white;
+}
+.yellow {
+	background-color: $newYellow;
+	color: $white;
+}
+.orange {
+	background-color: $orange;
+	color: $white;
+}
+.red {
+	background-color: $red;
+	color: $white;
+}
+
+
+.intro-section {
+	text-align: center;
+	background-color: $white;
+}
+.player-section {
+	text-align: center;
+}
+.player-rank {
+	font-size: 1.25rem;
+}
+.player-headline {
+	font-size: 1.5rem;
+}

@@ -1,0 +1,67 @@
+.page-text {
+  font-family: "halyard-display", sans-serif;
+  color: #2E2E2F;
+}
+
+.page-title {
+  color: #2E2E2F;
+}
+
+.page-key {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 610px) {
+  .page-key {
+    font-size: 1rem;
+  }
+}
+
+.small-note {
+  font-size: .75rem;
+}
+
+.player-row {
+  border: 1px solid #AAB3B7;
+  margin: 1rem;
+  font-family: "halyard-display", sans-serif;
+}
+
+.green {
+  background-color: #98EF71;
+  color: #FFFFFF;
+}
+
+.yellow {
+  background-color: #EFEA4D;
+  color: #FFFFFF;
+}
+
+.orange {
+  background-color: #FFA945;
+  color: #FFFFFF;
+}
+
+.red {
+  background-color: #EF7171;
+  color: #FFFFFF;
+}
+
+.intro-section {
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.player-section {
+  text-align: center;
+}
+
+.player-rank {
+  font-size: 1.25rem;
+}
+
+.player-headline {
+  font-size: 1.5rem;
+}
+
