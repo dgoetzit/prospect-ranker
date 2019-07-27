@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        'App\Console\Commands\GetMinorLeagueAffiliatesForCurrentYear',
     ];
 
     /**
@@ -24,8 +24,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        // I will need to pick a date to schedule this command
+        // It will run once a year
+        // And get the current affiliates for the new year
+        // I will probably also need a command to add the new year to the db
+        $schedule->command('affiliates:get-current')->yearly();
     }
 
     /**

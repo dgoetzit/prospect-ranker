@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlayersTable extends Migration
+class CreateAffiliateTableLinksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreatePlayersTable extends Migration
      */
     public function up()
     {
-        Schema::create('players', function (Blueprint $table) {
+        Schema::create('affiliate_table_links', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->enum('bats', array('left', 'right', 'switch'));
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreatePlayersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('players');
+        Schema::dropIfExists('affiliate_table_links');
     }
 }

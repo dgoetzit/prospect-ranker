@@ -11,8 +11,18 @@ class PlayerController extends Controller
     
     public function index() {
 
+                // Here,
+                // I probably don't want to truncate the players table
+                // Because deleting all data, especially if I want this on mass scale
+                // And rebuilding it all is such a chore for the server
+                // And will render the UX horrible
                 Player::truncate();
 
+                // Here, I really need to devise a script that scrapes the google results for a particular search, and saves the correct file in a DB
+                // I probably also need to save all of these records in the DB
+                // This way, historical data will be much easier to access
+                // Maybe I need to associate each player record with a corresponding year
+                // This way, I can easily get all of the player records for a particular year
                 $htmlFiles = array();
                 array_push($htmlFiles, 'https://www.baseball-reference.com/register/team.cgi?id=41270199'); // single a
                 array_push($htmlFiles, 'https://www.baseball-reference.com/register/team.cgi?id=299f8366'); // high a
@@ -21,6 +31,8 @@ class PlayerController extends Controller
 
                 foreach ($htmlFiles as $html) {
 
+                    // This bit of conditionality wouldn't be necessary if I was saving
+                    // Links with an association to the team and the level
                     if (strpos($html, '41270199') !== false) {
                         $level = 'A';
                     } elseif (strpos($html, '299f8366') !== false) {
